@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:widgets/todocontents.dart';
+import 'package:todowidgets/todocontents.dart';
 import 'donecontents.dart';
 
 class ContentsBox extends StatelessWidget {
