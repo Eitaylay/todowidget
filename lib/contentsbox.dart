@@ -6,6 +6,9 @@ import 'donecontents.dart';
 class ContentsBox extends StatelessWidget {
   const ContentsBox({super.key});
 
+  final paleGreen = const Color(0xFFC7D3B6);
+  final indigo = const Color(0xFF9AA7EA);
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,7 +23,7 @@ class ContentsBox extends StatelessWidget {
                 Container(
                   width: 120,
                   height: 120,
-                  color: const Color(0xFFC7D3B6),
+                  color: paleGreen,
                   margin: const EdgeInsets.all(15),
                 ),
                 ToDoContents(),
@@ -31,7 +34,7 @@ class ContentsBox extends StatelessWidget {
                 Container(
                   width: 120,
                   height: 120,
-                  color: const Color(0xFFC7D3B6),
+                  color: paleGreen,
                   margin: const EdgeInsets.all(15),
                 ),
                 ToDoContents(),
@@ -42,7 +45,7 @@ class ContentsBox extends StatelessWidget {
                 Container(
                   width: 120,
                   height: 120,
-                  color: const Color(0xFFC7D3B6),
+                  color: paleGreen,
                   margin: const EdgeInsets.all(15),
                 ),
                 DoneContents(),

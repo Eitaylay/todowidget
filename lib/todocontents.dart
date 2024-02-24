@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 class ToDoContents extends StatelessWidget {
   const ToDoContents({super.key});
 
+  final paleGreen = const Color(0xFFC7D3B6);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -39,7 +41,7 @@ class ToDoContents extends StatelessWidget {
               ElevatedButton(
                 child: Text("Todo"),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFC7D3B6),
+                  backgroundColor: paleGreen,
                   foregroundColor: Colors.black,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),

@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 class TitleAndMenu extends StatelessWidget {
   const TitleAndMenu({super.key});
 
+  final paleGreen = const Color(0xFFC7D3B6);
+  final indigo = const Color(0xFF9AA7EA);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,7 +19,7 @@ class TitleAndMenu extends StatelessWidget {
             Container(
               width: 135,
               height: 35,
-              color: const Color(0xFFC7D3B6),
+              color: indigo,
               margin: const EdgeInsets.only(top: 30, bottom: 30),
               alignment: Alignment.center,
               child: const Text(
@@ -30,7 +33,7 @@ class TitleAndMenu extends StatelessWidget {
             Container(
               width: 135,
               height: 35,
-              color: const Color(0xFF9AA7EA),
+              color: paleGreen,
               margin: const EdgeInsets.only(top: 30, bottom: 30),
               alignment: Alignment.center,
               child: const Text(

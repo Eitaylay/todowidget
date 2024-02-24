@@ -25,14 +25,17 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key});
+  const MyHomePage({super.key});
+
+  final paleGreen = const Color(0xFFC7D3B6);
+  final indigo = const Color(0xFF9AA7EA);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: const Color(0xFFC7D3B6),
+        backgroundColor: paleGreen,
         title: const Text(
           "TODO List",
           style: TextStyle(
@@ -43,26 +46,40 @@ class MyHomePage extends StatelessWidget {
             decorationThickness: 2,
           ),
         ),
+        actions: [
+          Container(
+            width: 35,
+            height: 35,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: indigo,
+            ),
+          ),
+        ],
       ),
-      bottomNavigationBar: const BottomAppBar(
-        color: Color(0xFFC1C9F2),
+      bottomNavigationBar: Container(
+        height: 80,
+        width: double.maxFinite,
+        color: indigo,
       ),
-      body: Column(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: IconButton.filled(
+        style: IconButton.styleFrom(
+          backgroundColor: paleGreen.withOpacity(0.8),
+          foregroundColor: Colors.white,
+        ),
+        onPressed: () {},
+        icon: const Icon(
+          Icons.add,
+          size: 35,
+        ),
+      ),
+      body: const Column(
         children: [
           Column(
             children: [
-              const TitleAndMenu(),
-              const ContentsBox(),
-              Padding(
-                padding: const EdgeInsets.all(8),
-                child: FloatingActionButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30)),
-                  key: const Key('myFab'),
-                  child: const Icon(Icons.add),
-                  onPressed: () {},
-                ),
-              ),
+              TitleAndMenu(),
+              ContentsBox(),
             ],
           ),
         ],
